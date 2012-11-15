@@ -165,8 +165,6 @@ class CertBot(object):
         key_handle.write(key)
         key_handle.close()
 
-        # print key
-
         if country == None or state == None or city == None or org == None or orgUnit == None or commonName == None or key == None or password == None:
             raise cherrypy.HTTPError("501 Not Implemented", "Requested fields can not be blank.")
         elif country == "" or state == "" or city == "" or org == "" or orgUnit == "" or commonName == "" or key == "" or password == "":
@@ -338,6 +336,6 @@ try:
     cherrypy.server.ssl_private_key = ca_key_file_name
 except:
     # TODO: LOGGING & Document a Test for this.
-    print "Can't determin bind IP based on host name (Not in /etc/hosts)?"
+    print "Can't determin bind IP based on host name (Not in /etc/hosts)?"    # This Try statement is worthless in its current state.
 
 cherrypy.quickstart(CertBot(working_dir=ca_dir, ca_key=ca_key_file_name, ca_key_pass=CA_key_password, ca_config=ca_config_handle.name))
