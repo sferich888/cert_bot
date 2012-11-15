@@ -1,5 +1,10 @@
 #!/bin/python
 
+# Cert Bot  Copyright (C) 2012 Eric Rich
+#  This program comes with ABSOLUTELY NO WARRANTY; for details type `show w'.
+#  This is free software, and you are welcome to redistribute it
+#  under certain conditions; type `show c' for details.
+
 import cherrypy
 import os, socket
 import shlex, subprocess
