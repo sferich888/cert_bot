@@ -215,8 +215,8 @@ class CertBot(object):
             # This is here to mask the CA Private key password from the web interface 
             sign_command = "openssl ca -in {CSR} -config {config} -passin pass:{key_pass} -batch".format(
                             key_pass=self.ca_key_pass, config=self.ca_config, CSR=csr_handle.name)
-            return_string = """<h2>Certificate</h2>{ssl_out}<br>Command used to generate: <b>{command}</b><br>
-                            """.format(command=sign_command, ssl_out=out)  
+            return_string = """<h2><a href='/'>{hostname}</a>: Your Certificate</h2>{ssl_out}<br>Command used to generate: <b>{command}</b><br>
+                            """.format(hostname=socket.gethostname(), command=sign_command, ssl_out=out)
         else:
             raise cherrypy.HTTPError("501 Not Implemented", "Server Certificate is not valid please check the certificate and resubmit.")
         
