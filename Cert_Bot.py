@@ -100,6 +100,13 @@ class CertBot(object):
        key_expected_header  = "-----BEGIN RSA PRIVATE KEY-----"
        key_expected_tail    = "-----END RSA PRIVATE KEY-----"
 
+       certificate = ''.join(certificate.split())
+
+       if certificate.startswith(cert_expected_header) and certificate.endswith(cert_expected_tail): 
+           return True
+       if certificate.startswith(key_expected_header) and certificate.endswith(key_expected_tail):
+           return True
+
        header = certificate[:35]                     # A CSR should start with this.
        tail = certificate[-33:len(certificate)]      # A CSR should end with this. 
        if header == cert_expected_header and tail == cert_expected_tail:
