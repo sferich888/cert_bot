@@ -1,7 +1,8 @@
-Cert Bot [standalone]
+Cert Bot
 ========
+> _Is now standalone: (meaning that it brings with it cherrypy so you dont have to install it as a dependency)_
 
-Certificate Traning Certificate Authority 
+**Certificate Traning Certificate Authority**
 
 The idea of this project is to explain how an [OpenSSL](http://www.openssl.org/) 
 [Certificate Authority](http://www.openssl.org/docs/apps/ca.html#) Works, and 
@@ -10,7 +11,7 @@ to convay how to setup an OpenSSL Certificate Authority.
 It is important to note that [OpenSSL](http://www.openssl.org)'s creators never
 ment for the CA utility to be used as a full blown CA itself: 
 
-_"nevertheless some people are using it for this purpose"_
+> _"nevertheless some people are using it for this purpose"_
 
 This tool does not attempt to be your organizations CA but it does detail the
 full process in creating a certificate, and how a CA signs the certificates.
