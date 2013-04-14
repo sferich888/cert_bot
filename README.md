@@ -1,7 +1,7 @@
-Cert Bot
+Cert Bot [standalone]
 ========
 
-Certificate Training Certificate Authority 
+Certificate Traning Certificate Authority 
 
 The idea of this project is to explain how an [OpenSSL](http://www.openssl.org/) 
 [Certificate Authority](http://www.openssl.org/docs/apps/ca.html#) Works, and 
@@ -17,7 +17,8 @@ full process in creating a certificate, and how a CA signs the certificates.
 
 **Cert Bot** fully written in [Python](http://www.python.org/) and is a 
 [CherryPy](http://www.cherrypy.org/) application. Currently these are the only 
-two requirements needed to run **Cert Bot**.
+two requirements needed to run **Cert Bot**. With the standalone version 
+[CherryPy](http://www.cherrypy.org/) is bundled with the application. 
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
